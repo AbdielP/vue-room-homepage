@@ -10,7 +10,7 @@ export default {
 
 <style scoped>
     div {
-        width: 100%;
+        width: auto;
         height: 400px;
         background: rebeccapurple;
     }
