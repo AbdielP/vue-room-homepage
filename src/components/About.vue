@@ -2,7 +2,13 @@
     <div></div>
 </template>
 
-<style>
+<script>
+export default {
+    name: 'about'
+}
+</script>
+
+<style scoped>
     div {
         width: 100%;
         height: 400px;
