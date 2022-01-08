@@ -3,7 +3,7 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <gallery />
     <shopnow />
-    <about />
+    <about class="component__about" />
   </div>
 </template>
 
@@ -35,12 +35,18 @@ export default {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
-    grid-template-areas:
-      ". ."
-      "About About";
   }
-  .About {
-    grid-area: About;
+
+  .component__about {
+    /* background-color: #c7fc6e; */
+    grid-row-start: 2;
+    grid-column-start: 1;
+
+    grid-row-end: 3;
+    grid-column-end: 3;
   }
 }
+/* https://angrytools.com/css-grid/ */ 
 </style>
+
+

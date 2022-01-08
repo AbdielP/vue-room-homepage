@@ -19,10 +19,22 @@ export default {
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+
+  --color-dark-gray: hsl(0, 0%, 63%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-very-dark-grey: hsl(0, 0%, 27%);
+}
+
+body {
+  font-size: 12px;
 }
 
 /* .app {
