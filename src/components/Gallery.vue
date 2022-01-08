@@ -17,7 +17,7 @@ export default {
 <style scoped>
 .figure {
   width: 100%;
-  height: 365px;
+  min-height: 365px;
 }
 
 .figure__img {
