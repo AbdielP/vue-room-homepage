@@ -76,12 +76,6 @@ export default {
   font-weight: 600;
 }
 
-.info__paragraph {
-  color: var(--color-dark-gray);
-  margin: 20px 0;
-  line-height: 1.7;
-}
-
 .shop__container {
   display: flex;
   margin-top: 50px;

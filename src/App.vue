@@ -1,26 +1,25 @@
 <template>
-  <router-view/>
+  <router-view />
 </template>
 
 <script>
-import Navigation from './components/Navigation.vue'
+import Navigation from "./components/Navigation.vue";
 
 export default {
   components: {
-    Navigation
-  }
-}
+    Navigation,
+  },
+};
 </script>
 
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
 
   --color-dark-gray: hsl(0, 0%, 63%);
   --color-black: hsl(0, 0%, 0%);
@@ -36,4 +35,9 @@ body {
   cursor: pointer;
 }
 
+.info__paragraph {
+  color: var(--color-dark-gray);
+  margin: 20px 0;
+  line-height: 1.7;
+}
 </style>

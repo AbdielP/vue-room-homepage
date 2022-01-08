@@ -46,7 +46,7 @@ export default {
     grid-column-end: 3;
   }
 }
-/* https://angrytools.com/css-grid/ */ 
+/* https://angrytools.com/css-grid/ */
 </style>
 
 
