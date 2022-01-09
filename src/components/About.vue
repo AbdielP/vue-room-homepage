@@ -3,7 +3,7 @@
     <figure class="container__img">
       <img
         class="about__img"
-        src="../../public/images/image-about-dark.jpg"
+        src="@/assets/images/image-about-dark.jpg"
         alt="chairs"
       />
     </figure>
@@ -22,7 +22,7 @@
     <figure class="container__img">
       <img
         class="about__img"
-        src="../../public/images/image-about-light.jpg"
+        src="@/assets/images/image-about-light.jpg"
         alt="chair"
       />
     </figure>
