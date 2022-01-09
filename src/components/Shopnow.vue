@@ -41,8 +41,8 @@ export default {
   name: "Shop",
   data() {
     return {
-      title: "Discover innovative ways to decorate",
-      text: "We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.",
+      title: "",
+      text: "",
       currentInfo: 0,
       info: [
         { title: "Discover innovative ways to decorate", text: "We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love." },
@@ -51,7 +51,14 @@ export default {
       ]
     }
   },
+  created() {
+    this.initData();
+  },
   methods: {
+    initData: function () {
+      this.title = this.info[0].title;
+      this.text = this.info[0].text;
+    },
     galleryBackward: function () {
       if (this.currentInfo > 0 && this.currentInfo <= this.info.length) {
         this.currentInfo --;
