@@ -2,15 +2,28 @@
   <figure class="figure">
     <img
       class="figure__img"
-      src="../../public/images/mobile-image-hero-1.jpg"
+      :src="mobile_images[0]"
       alt="Furniture images"
     />
   </figure>
+  <!-- <img v-bind:src="bro" alt="bro.."> -->
+  <!-- <p>
+    {{mobile_images[0]}}
+  </p> -->
 </template>
 
 <script>
+import * as m1 from '@/assets/images/mobile-image-hero-1.jpg';
+import * as m2 from '@/assets/images/mobile-image-hero-2.jpg';
+import * as m3 from '@/assets/images/mobile-image-hero-3.jpg';
+
 export default {
   name: "Gallery",
+  data() {
+    return {
+      mobile_images: [m1,m2,m3]
+    };
+  },
 };
 </script>
 
@@ -21,8 +34,8 @@ export default {
 }
 
 .figure__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>
