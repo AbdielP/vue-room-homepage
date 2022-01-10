@@ -44,12 +44,11 @@ export default {
 @media (min-width: 600px) {
   .div__home {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-rows: 1fr;
   }
 
   .component__about {
-    /* background-color: #c7fc6e; */
     grid-row-start: 2;
     grid-column-start: 1;
 
