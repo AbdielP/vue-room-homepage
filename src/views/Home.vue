@@ -1,8 +1,9 @@
 <template>
   <div class="div__home">
+    {{actualImage }}
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <gallery />
-    <shopnow />
+    <shopnow @image="actualImage += $event"/>
     <about class="component__about" />
   </div>
 </template>
@@ -16,11 +17,21 @@ import About from "../components/About.vue";
 
 export default {
   name: "Home",
+  data() {
+    return {
+      actualImage : 0
+    }
+  },
   components: {
     Gallery,
     Shopnow,
     About,
     // HelloWorld
+  },
+  provide() {
+    return {
+      image: this.actualImage
+    }
   },
 };
 </script>
