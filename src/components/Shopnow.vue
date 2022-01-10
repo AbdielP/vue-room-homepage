@@ -94,8 +94,8 @@ export default {
 }
 
 .container__button {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border: none;
   background: var(--color-black);
 }
