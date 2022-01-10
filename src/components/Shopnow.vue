@@ -2,7 +2,7 @@
   <section class="shopnow">
     <div class="container">
       <div class="container__buttons">
-        <button class="container__button cursor-pointer" type="button" v-on:click="galleryBackward()" @click="$emit('image', -1)">
+        <button class="container__button cursor-pointer" type="button" v-on:click="galleryBackward()">
           <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M13 0L1 12l12 12"
@@ -12,7 +12,7 @@
             />
           </svg>
         </button>
-        <button class="container__button cursor-pointer" type="button" v-on:click="galleryForward()" @click="$emit('image', 1)">
+        <button class="container__button cursor-pointer" type="button" v-on:click="galleryForward()">
           <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M1 0l12 12L1 24"
@@ -60,7 +60,7 @@ export default {
       this.text = this.info[0].text;
     },
     galleryBackward: function () {
-      if (this.currentInfo > 0 && this.currentInfo <= this.info.length) {
+      if (this.currentInfo > 0) {
         this.currentInfo --;
         this.changeInfo(this.currentInfo);
       }
@@ -74,6 +74,9 @@ export default {
     changeInfo: function (value) {
       this.title = this.info[value].title;
       this.text = this.info[value].text;
+      console.log(this.currentInfo);
+      // https://blog.logrocket.com/how-to-make-provide-inject-reactive/
+      this.$emit('image', this.currentInfo);
     }
   }
 };
