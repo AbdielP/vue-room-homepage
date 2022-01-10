@@ -2,10 +2,10 @@
   <figure class="figure">
     <img
       class="figure__img"
-      :src="mobile_images[0]"
+      :src="mobile_images[image]"
       alt="Furniture images"
     />
-    {{image}}
+    <!-- {{mobile_images[image]}} -->
   </figure>
   <!-- <img v-bind:src="bro" alt="bro.."> -->
   <!-- <p>
@@ -20,14 +20,12 @@ import * as m3 from '@/assets/images/mobile-image-hero-3.jpg';
 
 export default {
   name: "Gallery",
-  inject: ['image'],
+  props: ['image'],
   data() {
     return {
-      mobile_images: [m1,m2,m3]
+      mobile_images: [m1,m2,m3],
+      actualImage: 0
     };
-  },
-  created() {
-    console.log(`Desde Home: ${this.image}...`)
   }
 };
 </script>

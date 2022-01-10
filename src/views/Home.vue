@@ -1,9 +1,9 @@
 <template>
   <div class="div__home">
-    {{actualImage }}
+    <!-- {{actualImage }} -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <gallery />
-    <shopnow @image="actualImage += $event"/>
+    <gallery v-bind:image="actualImage"/>
+    <shopnow @image="actualImage = $event"/>
     <about class="component__about" />
   </div>
 </template>
@@ -57,7 +57,6 @@ export default {
     grid-column-end: 3;
   }
 }
-/* https://angrytools.com/css-grid/ */
 </style>
 
 
