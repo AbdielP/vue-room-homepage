@@ -74,8 +74,6 @@ export default {
     changeInfo: function (value) {
       this.title = this.info[value].title;
       this.text = this.info[value].text;
-      // console.log(this.currentInfo);
-      // https://blog.logrocket.com/how-to-make-provide-inject-reactive/
       this.$emit('image', this.currentInfo);
     }
   }

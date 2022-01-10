@@ -27,12 +27,7 @@ export default {
     Shopnow,
     About,
     // HelloWorld
-  },
-  provide() {
-    return {
-      image: this.actualImage
-    }
-  },
+  }
 };
 </script>
 
@@ -43,7 +38,7 @@ export default {
 
 @media (min-width: 600px) {
   .div__home {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     /* grid-template-rows: 1fr 1fr; */
     grid-template-rows: 1fr;
   }

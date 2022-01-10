@@ -58,4 +58,11 @@ export default {
     letter-spacing: 3px;
     text-transform: uppercase;
 }
+
+@media (min-width: 600px) {
+  .container {
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
 </style>
