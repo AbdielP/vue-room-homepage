@@ -1,7 +1,8 @@
 <template>
-  <header>
+  <header v-bind:class="{ header: toggle }">
     <nav class="navbar">
       <svg
+        v-on:click="toggleNav()"
         class="navbar__hamburger cursor-pointer"
         width="20"
         height="14"
@@ -22,8 +23,14 @@
           />
         </svg>
       </a>
-      <div class="navbar__list">
-        <svg class="svg__close cursor-pointer" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+      <div class="navbar__list" v-if="toggle">
+        <svg
+          class="svg__close cursor-pointer"
+          width="16"
+          height="16"
+          xmlns="http://www.w3.org/2000/svg"
+          v-on:click="toggleNav()"
+        >
           <path
             d="M14.364.222l1.414 1.414L9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222z"
             fill="#000"
@@ -43,10 +50,32 @@
 <script>
 export default {
   name: "Navigation",
+  data() {
+    return {
+      toggle: false,
+    };
+  },
+  methods: {
+    toggleNav: function () {
+      return (this.toggle = !this.toggle);
+    },
+  },
 };
 </script>
 
 <style scoped>
+.header {
+  /* display: block; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: hsl(0, 0%, 0%, .5);
+  /* transition: opacity 1s ease-in-out; */
+}
+
 .navbar {
   position: absolute;
   width: 100%;
@@ -63,7 +92,7 @@ export default {
 }
 
 .navbar__list {
-  opacity: .2;
+  z-index: 101;
   position: fixed;
   background: var(--color-white);
   width: 100%;
@@ -75,12 +104,12 @@ export default {
 }
 
 .svg__close {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 .navbar__link {
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--color-black);
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--color-black);
 }
 </style>
