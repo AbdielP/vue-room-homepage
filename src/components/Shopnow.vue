@@ -143,7 +143,7 @@ export default {
 }
 
 .shop__paragraph {
-  margin-right: 40px;
+  margin-right: 36px;
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 10px;
@@ -172,12 +172,17 @@ export default {
     flex-direction: column;
     align-self: flex-start;
     justify-content: center;
-    padding: 15% 14% 14% 14%;
+    padding: 70px 14%;
+    /* padding: 15% 14% 0% 14%; */
   }
 
   .title {
     font-weight: 700;
     font-size: clamp(1.4rem, 2.5vw, 3rem);
+  }
+
+  .shop__container {
+    margin-top: 10px;
   }
 }
 </style>
