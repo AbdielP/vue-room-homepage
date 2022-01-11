@@ -59,7 +59,7 @@ export default {
     text-transform: uppercase;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 850px) {
   .container {
     grid-template-columns: 1fr 1.5fr 1fr;
     grid-template-rows: 1fr;

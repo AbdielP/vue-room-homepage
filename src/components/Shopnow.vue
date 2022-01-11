@@ -2,7 +2,11 @@
   <section class="shopnow">
     <div class="container">
       <div class="container__buttons">
-        <button class="container__button cursor-pointer" type="button" v-on:click="galleryBackward()">
+        <button
+          class="container__button cursor-pointer"
+          type="button"
+          v-on:click="galleryBackward()"
+        >
           <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M13 0L1 12l12 12"
@@ -12,7 +16,11 @@
             />
           </svg>
         </button>
-        <button class="container__button cursor-pointer" type="button" v-on:click="galleryForward()">
+        <button
+          class="container__button cursor-pointer"
+          type="button"
+          v-on:click="galleryForward()"
+        >
           <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M1 0l12 12L1 24"
@@ -26,11 +34,17 @@
     </div>
 
     <div class="info__container">
-      <h1 class="title">{{title}}</h1>
-      <p class="info__paragraph">{{text}}</p>
+      <h1 class="title">{{ title }}</h1>
+      <p class="info__paragraph">{{ text }}</p>
       <div class="shop__container">
         <p class="shop__paragraph">Shop now</p>
-        <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="#000" fill-rule="nonzero"/></svg>
+        <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+            fill="#000"
+            fill-rule="nonzero"
+          />
+        </svg>
       </div>
     </div>
   </section>
@@ -45,11 +59,20 @@ export default {
       text: "",
       currentInfo: 0,
       info: [
-        { title: "Discover innovative ways to decorate", text: "We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love." },
-        { title: "We are available all across the globe", text: "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today." },
-        { title: "Manufactured with the best materials", text: "Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office." }
-      ]
-    }
+        {
+          title: "Discover innovative ways to decorate",
+          text: "We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.",
+        },
+        {
+          title: "We are available all across the globe",
+          text: "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.",
+        },
+        {
+          title: "Manufactured with the best materials",
+          text: "Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.",
+        },
+      ],
+    };
   },
   created() {
     this.initData();
@@ -61,26 +84,31 @@ export default {
     },
     galleryBackward: function () {
       if (this.currentInfo > 0) {
-        this.currentInfo --;
+        this.currentInfo--;
         this.changeInfo(this.currentInfo);
       }
     },
-    galleryForward: function() {
-      if (this.currentInfo < this.info.length -1) {
-        this.currentInfo ++;
+    galleryForward: function () {
+      if (this.currentInfo < this.info.length - 1) {
+        this.currentInfo++;
         this.changeInfo(this.currentInfo);
       }
     },
     changeInfo: function (value) {
       this.title = this.info[value].title;
       this.text = this.info[value].text;
-      this.$emit('image', this.currentInfo);
-    }
-  }
+      this.$emit("image", this.currentInfo);
+    },
+  },
 };
 </script>
 
 <style scoped>
+.shopnow {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   width: 100%;
   position: relative;
@@ -117,7 +145,39 @@ export default {
 .shop__paragraph {
   margin-right: 40px;
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: 0.8rem;
   letter-spacing: 10px;
+}
+
+@media (min-width: 850px) {
+  .shopnow {
+    flex-direction: column-reverse;
+  }
+  .container {
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .container__buttons {
+    position: initial;
+  }
+
+  .container__button {
+    width: 80px;
+    height: 80px;
+  }
+
+  .info__container {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: center;
+    padding: 15% 14% 14% 14%;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: clamp(1.4rem, 2.5vw, 3rem);
+  }
 }
 </style>

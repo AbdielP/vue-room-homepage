@@ -32,7 +32,7 @@ export default {
   display: grid;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 850px) {
   .div__home {
     grid-template-columns: 1.5fr 1fr;
     /* grid-template-rows: 1fr 1fr; */
