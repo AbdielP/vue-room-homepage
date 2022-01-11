@@ -1,7 +1,5 @@
 <template>
   <div class="div__home">
-    <!-- {{actualImage }} -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <gallery v-bind:image="actualImage"/>
     <shopnow @image="actualImage = $event"/>
     <about class="component__about" />
@@ -9,11 +7,10 @@
 </template>
 
 <script>
-import Gallery from "../components/Gallery.vue";
-import Shopnow from "../components/Shopnow.vue";
-import About from "../components/About.vue";
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
+import Gallery from "@/components/Gallery.vue";
+import Shopnow from "@/components/Shopnow.vue";
+import About from "@/components/About.vue";
 
 export default {
   name: "Home",
@@ -25,8 +22,7 @@ export default {
   components: {
     Gallery,
     Shopnow,
-    About,
-    // HelloWorld
+    About
   }
 };
 </script>
