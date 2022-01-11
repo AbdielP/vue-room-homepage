@@ -65,14 +65,13 @@ export default {
 
 <style scoped>
 .header {
-  /* display: block; */
+  background: hsl(0, 0%, 0%, .5);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   height: 100vh;
-  background: hsl(0, 0%, 0%, .5);
   /* transition: opacity 1s ease-in-out; */
 }
 
@@ -111,5 +110,14 @@ export default {
   text-decoration: none;
   font-weight: 700;
   color: var(--color-black);
+}
+
+@media (min-width: 600px) {
+  .navbar {
+    justify-content: flex-start;
+  }
+  .navbar__hamburger {
+    display: none;
+  }
 }
 </style>
