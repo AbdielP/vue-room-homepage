@@ -162,18 +162,17 @@ export default {
     position: initial;
   }
 
-  .container__button {
-    width: 80px;
-    height: 80px;
-  }
-
   .info__container {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
     justify-content: center;
-    padding: 70px 14%;
+    padding: 30px 14%;
     /* padding: 15% 14% 0% 14%; */
+  }
+
+  .info__paragraph {
+    font-size: 10px;
   }
 
   .title {
@@ -181,8 +180,21 @@ export default {
     font-size: clamp(1.4rem, 2.5vw, 3rem);
   }
 
-  .shop__container {
+  /* .shop__container {
     margin-top: 10px;
+  } */
+}
+
+@media (min-width: 1200px) {
+  .container__button {
+    width: 65px;
+    height: 65px;
+  }
+  .info__container {
+    padding: 70px 14%;
+  }
+  .info__paragraph {
+    font-size: 12px;
   }
 }
 </style>

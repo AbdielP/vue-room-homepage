@@ -42,11 +42,13 @@ export default {
 
 .container__img {
   width: 100%;
+  height: 100%;
 }
 
 .about__img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .info__container {
@@ -54,15 +56,40 @@ export default {
 }
 
 .title {
-    font-size: inherit;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+  font-size: inherit;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 @media (min-width: 850px) {
   .container {
-    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-columns: 1fr 1.3fr 1fr;
     grid-template-rows: 1fr;
+  }
+
+  .info__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px 27px;
+  }
+
+  .info__paragraph {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .title {
+    font-size: 0.8rem;
+  }
+  .info__container {
+    padding: 0 27px 0 27px;
+  }
+
+  .info__paragraph {
+    font-size: 12px;
   }
 }
 </style>
