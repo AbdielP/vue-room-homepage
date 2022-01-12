@@ -115,7 +115,7 @@ export default {
   color: var(--color-black);
 }
 
-@media (min-width: 850px) {
+@media (min-width: 650px) {
   .navbar {
     justify-content: flex-start;
     padding-left: 60px;
