@@ -162,6 +162,11 @@ export default {
     justify-content: flex-start;
   }
 
+  .container__button {
+    width: 5.2vw;
+    height: 5.2vw;
+  }
+
   .container__buttons {
     position: initial;
   }
@@ -178,22 +183,15 @@ export default {
   .title {
     margin-top: 30px;
     font-weight: 700;
-    font-size: clamp(1.4rem, 2.5vw, 3rem);
+    font-size: 2.5vw;
   }
-
-  /* .shop__container {
-    margin-top: 10px;
-  } */
 }
 
 @media (min-width: 1200px) {
 
-  .container__button {
-    width: 77px;
-    height: 77px;
-  }
-  .info__paragraph {
-    font-size: 12px;
+  
+  .info__paragraph,.shop__paragraph {
+    font-size: .83vw;
   }
 }
 </style>
