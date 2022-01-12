@@ -73,21 +73,22 @@ export default {
   }
 
   .info__paragraph {
-    font-size: 10px;
+    font-size: .84vw;
+  }
+
+  .title {
+    margin-top: 20px;
+    letter-spacing: 5.4px;
+    font-size: .83vw;
   }
 }
 
 @media (min-width: 1200px) {
 
-  .title {
-    font-size: 0.8rem;
-  }
+  
   .info__container {
-    padding: 0 27px 0 27px;
-  }
-
-  .info__paragraph {
-    font-size: 12px;
+    /* padding: 0 27px 0 27px; */
+    padding: 46px;
   }
 }
 </style>
