@@ -119,7 +119,6 @@ export default {
     justify-content: flex-start;
     padding-left: 60px;
     top: 55px;
-    font-size: .8vw;
   }
   .navbar__hamburger {
     display: none;
@@ -140,6 +139,13 @@ export default {
     padding-bottom: 20px;
   }.navbar__link:hover {
     border-bottom: 2px solid var(--color-white);
+  }
+
+  @media (min-width: 1200px) {
+     .navbar {
+    font-size: .8vw;
+  }
+    
   }
   
 }
