@@ -65,7 +65,7 @@ export default {
   display: none;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 700px) {
   .figure__img--desktop {
     display: block;
   }
