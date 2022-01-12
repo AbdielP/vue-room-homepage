@@ -40,7 +40,4 @@ body {
   margin: 20px 0;
   line-height: 1.7;
 }
-/* REPARAR
-1. Mejorar estilos y tamaños para mobiles
-2. Las imagenes mobiles se ven feas antes de los 850px */
 </style>

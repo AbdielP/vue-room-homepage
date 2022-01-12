@@ -79,7 +79,6 @@ export default {
   position: absolute;
   width: 100%;
   top: 40px;
-  /* overflow: hidden; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,6 +119,7 @@ export default {
     justify-content: flex-start;
     padding-left: 60px;
     top: 55px;
+    font-size: .8vw;
   }
   .navbar__hamburger {
     display: none;
