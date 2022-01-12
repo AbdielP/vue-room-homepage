@@ -63,14 +63,12 @@ export default {
 
 @media (min-width: 850px) {
   .container {
-    grid-template-columns: 1fr 1.3fr 1fr;
+    grid-template-columns: 1fr 1.4fr 1fr;
     grid-template-rows: 1fr;
   }
 
   .info__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin: auto;
     padding: 25px 27px;
   }
 

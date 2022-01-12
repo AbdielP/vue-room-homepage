@@ -126,7 +126,7 @@ export default {
   }
 
   .a__logo {
-    margin-right: 3.5rem;
+    margin-right: 2.8rem;
   }
 
   .navbar__list {

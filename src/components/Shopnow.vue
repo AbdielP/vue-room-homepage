@@ -36,7 +36,7 @@
     <div class="info__container">
       <h1 class="title">{{ title }}</h1>
       <p class="info__paragraph">{{ text }}</p>
-      <div class="shop__container">
+      <div class="shop__container cursor-pointer">
         <p class="shop__paragraph">Shop now</p>
         <svg width="40" height="12" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -126,6 +126,8 @@ export default {
   height: 55px;
   border: none;
   background: var(--color-black);
+}.container__button:hover {
+  background: var(--color-very-dark-grey);
 }
 
 .info__container {
@@ -140,6 +142,8 @@ export default {
 .shop__container {
   display: flex;
   margin-top: 50px;
+}.shop__container:hover {
+  color: var(--color-dark-gray)
 }
 
 .shop__paragraph {
@@ -163,12 +167,8 @@ export default {
   }
 
   .info__container {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    justify-content: center;
     padding: 30px 14%;
-    /* padding: 15% 14% 0% 14%; */
+    margin: auto;
   }
 
   .info__paragraph {
@@ -176,6 +176,7 @@ export default {
   }
 
   .title {
+    margin-top: 30px;
     font-weight: 700;
     font-size: clamp(1.4rem, 2.5vw, 3rem);
   }
@@ -186,12 +187,10 @@ export default {
 }
 
 @media (min-width: 1200px) {
+
   .container__button {
-    width: 65px;
-    height: 65px;
-  }
-  .info__container {
-    padding: 70px 14%;
+    width: 77px;
+    height: 77px;
   }
   .info__paragraph {
     font-size: 12px;
